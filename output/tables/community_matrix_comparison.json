@@ -1,0 +1,24 @@
+{
+  "rho_abm_alpha": 0.31419204908781856,
+  "p_abm_alpha": 3.416546035627683e-06,
+  "rho_glv_alpha": 0.3038319729381789,
+  "p_glv_alpha": 7.356588708297227e-06,
+  "rho_abm_glv": 0.6893899424568313,
+  "p_abm_glv": 5.9702227111894445e-31,
+  "abm_dominant": "Grassy Woodlands",
+  "abm_subordinate": "Rainforests",
+  "glv_dominant": "Saline Wetlands",
+  "glv_subordinate": "Heathlands",
+  "abm_extinct": [
+    "Rainforests",
+    "Heathlands"
+  ],
+  "glv_extinct": [
+    "Grasslands",
+    "Rainforests",
+    "Freshwater Wetlands",
+    "Heathlands"
+  ],
+  "dominant_agreement": false,
+  "subordinate_agreement": false
+}

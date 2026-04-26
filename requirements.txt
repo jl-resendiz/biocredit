@@ -1,0 +1,16 @@
+# Pinned versions for replication. Install with:
+#   pip install -r requirements.txt
+#
+# Tested on Python 3.10+ (Windows 11) March 2026. Floors are listed in
+# pyproject.toml; this file pins the exact versions used to produce
+# the figures and numbers in the manuscript.
+
+numpy==2.3.3
+scipy==1.16.2
+matplotlib==3.10.7
+pandas==2.2.3
+
+# Global sensitivity analysis (Sobol indices) for scripts/sensitivity_sobol.py.
+# Pinned to the floor required by the API used in that script
+# (saltelli.sample, sobol.analyze with calc_second_order=False).
+SALib>=1.4.7

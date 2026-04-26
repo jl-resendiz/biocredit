@@ -1,0 +1,87 @@
+{
+  "generated": "2026-03-20T22:19:21.875283",
+  "git_commit": "063e3df0f9d9d659edaf671ff8e682b5c17fb863",
+  "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "raw_data": {
+    "nsw_credit_transactions_register.csv": {
+      "exists": true,
+      "size_bytes": 939933,
+      "modified": "2026-03-14T22:06:43",
+      "checksum": "93c279b66a039c8e6861cc8fdad16e840b6be3fec80c200341eb3a2e8f316c68"
+    },
+    "nsw_credit_supply_register.csv": {
+      "exists": true,
+      "size_bytes": 1358976,
+      "modified": "2026-03-14T22:06:43",
+      "checksum": "3cb9188ff49729d6b3bfa1ae39033a00435ddad5b3db6dfe395a9bf5595a6f28"
+    }
+  },
+  "pipeline_outputs": {
+    "abm_results.json": {
+      "exists": true,
+      "size_bytes": 6878,
+      "modified": "2026-03-20T16:30:41.557922",
+      "checksum": "9c130eae3689367bd75e924a0b79c52e736baaf210ec4047b1a016ee96330f90"
+    },
+    "glv_results.json": {
+      "exists": true,
+      "size_bytes": 7688,
+      "modified": "2026-03-20T21:34:04.717436",
+      "checksum": "801250713846033a0fc8e60607afd072a3c9ee68b24f7c05a99d472a2a7ea628"
+    },
+    "sensitivity_results.json": {
+      "exists": true,
+      "size_bytes": 1277,
+      "modified": "2026-03-20T09:49:03.556722",
+      "checksum": "3eda88466ad07e30a0c9c00159552eec3684005e3fae4948d5d4293aa8c4d3f7"
+    },
+    "demand_robustness_results.json": {
+      "exists": true,
+      "size_bytes": 1675,
+      "modified": "2026-03-20T09:50:45.621178",
+      "checksum": "00a4f413e9138483af6af091de88d529b558b733b91bcdeb5cfb8929d3cf210a"
+    },
+    "diagnostics.json": {
+      "exists": true,
+      "size_bytes": 11061,
+      "modified": "2026-03-20T20:00:15.864442",
+      "checksum": "a6384d8ff05d30357f602c9ca1e78b56e8e3c0cdb18261d9e9257d586e48d951"
+    }
+  },
+  "figures": {
+    "fig1_problem.pdf": {
+      "exists": true,
+      "size_bytes": 24306,
+      "modified": "2026-03-20T20:00:30.076779",
+      "checksum": "2ac1696cf6639b006ef36b049c168dc281500db9084441ea8c64c3f5a7099b50",
+      "referenced_by": "main.tex"
+    },
+    "fig2_mechanism.pdf": {
+      "exists": true,
+      "size_bytes": 29288,
+      "modified": "2026-03-20T20:00:32.492401",
+      "checksum": "cfe47568649ee3e857aed1667b0188c272a298b8f6f8227a33f4923ea7797e8c",
+      "referenced_by": "main.tex"
+    },
+    "fig3_policy.pdf": {
+      "exists": true,
+      "size_bytes": 33451,
+      "modified": "2026-03-20T20:00:34.765851",
+      "checksum": "4d07cba362bd0e8577bd65dfcd95285d06b1be05fa0d90ff90617f22eda3a639",
+      "referenced_by": "main.tex"
+    },
+    "suppfig1_robustness.pdf": {
+      "exists": true,
+      "size_bytes": 92501,
+      "modified": "2026-03-20T20:01:50.907883",
+      "checksum": "495b6f3af7948b14c47c2829d828ace5a7a1f37bd1a7f60d9c2ba18dc24525f7",
+      "referenced_by": "supplementary.tex"
+    }
+  },
+  "verification": {
+    "verify_claims_exit_code": 0,
+    "empirical_claims_match": true,
+    "model_claims_match": true,
+    "mismatches": []
+  }
+}
