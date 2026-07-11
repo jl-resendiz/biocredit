@@ -74,9 +74,10 @@ The question is not whether these markets should be linked to development
 compensation evenly across the ecosystem types they are mandated to protect.
 A 2019 global review of biodiversity offset schemes found that only
 approximately one-third achieved no-net-loss outcomes~\cite{zuErmgassen2019}.
-These failures have been attributed primarily to metric design, monitoring gaps,
-and political compromise~\cite{Gibbons2018,Maron2016}, but whether the market design itself systematically excludes
-most ecosystem types from receiving investment remains an open question.
+Existing diagnoses point at metric design, monitoring gaps, and political
+compromise~\cite{Maron2016}, but whether the market design itself
+systematically excludes most ecosystem types from receiving investment
+remains an open question.
 
 There are theoretical reasons to suspect it does.
 Compliance buyers must offset impacts on a specific ecosystem type, but when
@@ -98,10 +99,11 @@ to a specific vegetation community.
 Transaction data alone reveals that 112 of these 252 types (44\%) have never
 been traded, but cannot explain why or predict which interventions would help.
 For that, we build an agent-based model in which four participant species
-interact across these credit types. Following Farmer's market-ecology
-framework~\cite{Farmer2002,SchollCalinescuFarmer2021}, species are defined
-by behavioural strategy rather than by institutional identity:
-(i) cost-minimising compliance demand: agents seeking the cheapest credit
+interact across these credit types. We adapt the market-ecology framework
+of Scholl, Calinescu and Farmer~\cite{SchollCalinescuFarmer2021} to a
+compliance market: species are defined by behavioural strategy rather
+than by institutional identity:
+(i) cost-minimising compliance buyers: agents seeking the cheapest credit
 that satisfies their obligation;
 (ii) mean-reversion intermediation: agents bidding against rolling
 fundamental value to exploit price dispersion;
@@ -122,8 +124,10 @@ demand in a few well-supplied types (least-cost selection).
 Second, when buyers cannot find credits for their specific obligation, they pay
 into the Fund rather than purchasing directly, routing demand
 away from the types that need it most (fund routing).
-Third, credit types that have traded before are approximately 8.4 times more
-likely to trade again, creating a self-reinforcing cycle in which popular types
+Third, credit types with ten or more prior transactions are approximately 8.4
+times more likely to be chosen than untraded types (intermediate transaction
+counts receive smaller weights, ranging from 1.5$\times$ to 5.1$\times$;
+Methods), creating a self-reinforcing cycle in which popular types
 attract more demand while neglected types remain neglected (liquidity feedback).
 
 Our model, which incorporates these three mechanisms alongside
@@ -139,10 +143,13 @@ The most effective interventions are those that keep demand in the open
 market: restricting developers' access to the Fund (bypass
 reduction) and requiring a fraction of purchases to be directed toward
 underserved types (procurement flexibility).
-Unlike the buyer-choice flexibility that previous work has shown to erode
-scarcity signals~\cite{zuErmgassen2020}, these are regulator-directed
-instruments that preserve price signals while channelling new demand where
-it is absent.
+Buyer-choice flexibility erodes the scarcity signal that should
+incentivise impact avoidance~\cite{zuErmgassen2020}; the procurement
+flexibility mandate avoids that failure mode. It does not let
+individual buyers substitute across types; it reallocates a fixed
+share of obligations to underserved types under regulator direction,
+trading type-specific compensation for coverage breadth on the
+redirected portion while preserving like-for-like on the rest.
 Interventions that restrict flexibility or raise costs without redirecting
 demand, including setting minimum credit prices (price floors),
 requiring more credits for rare types (rarity multipliers), and
@@ -159,7 +166,8 @@ operational or in development worldwide, including the United Kingdom's
 Biodiversity Net Gain framework, which became mandatory in 2024~\cite{IAPB2024}.
 Each operates a compliance market in which developers offset impacts on
 specific ecosystem types, and each faces the same structural risk: that
-least-cost compliance will concentrate demand before coverage gaps can be corrected.
+least-cost compliance is likely to concentrate demand before coverage
+gaps can be corrected.
 The NSW evidence shows that once the liquidity feedback cycle has set in,
 the pattern is self-reinforcing.
 The intervention window is open now, before these markets lock in the same design.
@@ -197,10 +205,12 @@ credits could be generated if demand existed at viable prices.
 Nor is it explained by absent demand. Developers do incur offset
 obligations in rare credit categories, but instead of purchasing credits
 directly, they pay into the Fund, and the Trust purchases on their
-behalf. The 24 credit categories served only by the Trust have each
-received at least one such indirect purchase, consistent with developer
-demand existing for these types but being routed away from the open
-market via the Fund.
+behalf~\cite{IPART2024}. Of the 24 credit categories served only by the
+Trust, each has received at least one purchase that the IPART transaction
+record classifies as a Fund-routed acquittal rather than the Trust's
+own-budget conservation spending. This is consistent with developer demand
+existing for these types but being routed away from the open market via
+the Fund.
 
 The exclusion is systematic, not random.
 Of the 252 ecosystem credit types, 79 correspond to listed Threatened
@@ -241,10 +251,10 @@ transfer the obligation to the Trust, which procures credits on their
 behalf. This makes the Trust the de facto safety net for thin-market
 ecosystem types: for 24 credit categories, it is the only buyer that
 has ever purchased credits.
-The discretion produces a measurable price premium: in thin markets
-(fewer than five lifetime transactions), the Trust pays a median of
-AUD\,5,989 per credit versus AUD\,1,125 for direct compliance buyers,
-a 5.3-fold differential that is highly significant (Methods).
+The discretion is associated with a measurable price differential: in
+thin markets (fewer than five lifetime transactions), the Trust pays a
+median of AUD\,5,989 per credit versus AUD\,1,125 for direct compliance
+buyers, a 5.3-fold gap that is highly significant (Methods).
 In functional markets the differential is markedly
 smaller, confirming that the premium reflects the Trust's role in
 thin markets rather than an artefact of overall price levels.
@@ -294,7 +304,7 @@ the model is 16.3\% (median across 50 Monte-Carlo runs; observed: 17.9\%),
 the simulated and observed shares of transactions across vegetation
 formations are tightly correlated (Methods, Fig.~\ref{fig:mechanism}a),
 and the simulated split of retirements between compliance buyers and the
-Trust (65.8\%/34.2\%) reproduces the observed 65\%/35\% breakdown. Five
+Trust (65.9\%/34.1\%) reproduces the observed 65\%/35\% breakdown. Five
 formations that are empirically near-extinct in the data (Grasslands,
 Rainforests, Saline Wetlands, Arid Shrublands, and Heathlands; each
 $\leq$9 lifetime transactions) emerge as near-extinct in the model
@@ -320,9 +330,12 @@ eliminating a third of the functional TEC markets in simulation;
 empirical FC-TEC is 22.8\%). The rarity multiplier (2$\times$ credits required for rare
 types) has only a marginal effect (16.5\%), confirming that the
 bottleneck for rare types is the existence of demand, not the quantity
-per transaction. One formation (Arid Shrublands, Acacia sub-formation)
-remains market-extinct under all scenarios: its development pressure is
-so low that no demand-side intervention generates obligations there.
+per transaction. Of the five formations that are near-extinct in the data,
+four (Grasslands, Rainforests, Saline Wetlands, Heathlands) recover under
+at least one demand-redirecting intervention, while one (Arid Shrublands,
+Acacia sub-formation) remains market-extinct under all scenarios: its
+development pressure is so low that no demand-side intervention generates
+obligations there.
 
 \subsection*{Robustness}
 
@@ -359,56 +372,67 @@ Bypass reduction (functional coverage 17.5\%) and procurement flexibility
 (17.1\%) both work by increasing the probability that a compliance buyer
 transacts directly with a credit supplier, rather than paying into a
 government fund.
-This finding converges with the NSW regulator's own assessment:
-IPART~\cite{IPART2023} independently concluded that the Fund pay-in
-option prevents the market from developing and recommended phasing it
-out. Our model quantifies why: every obligation that enters the Fund
-is one fewer direct transaction in the open market, and the cumulative
-effect is a 13 percentage point reduction in Fund routing (from
-34.1\% to 21.3\%) when bypass is restricted.
+The NSW regulator reached the same diagnosis on different
+grounds~\cite{IPART2023}, recommending that the Fund pay-in option be
+phased out. The model supplies the missing mechanism: every
+obligation that enters the Fund is one fewer direct transaction in
+the open market, and the cumulative effect is a 13 percentage point
+reduction in Fund routing (from 34.1\% to 21.3\%) when bypass is
+restricted.
 
-Bypass reduction operates as a necessary precondition rather than a
-stand-alone fix. The 2024 Amendment Act acquittal deadline reduced NSW
-market bypass from 81\% in 2022--23 to approximately 18\% in
-2024--25~\cite{IPART2025}, while functional coverage held at 18\% over
-the same window (Supplementary Table~1 footnote): bypass reduction
-redirects demand toward the open market, and procurement flexibility ---
-which allocates a share of compliance demand to underserved types ---
-translates that redirected flow into coverage gains.
+Bypass reduction in the model operates as a necessary precondition rather
+than a stand-alone fix. The empirical record sits on a different margin:
+the 2024 Amendment Act acquittal deadline forced developers to acquit dormant
+obligations, lowering the unacquitted-obligation share from 81\% in
+2022--23 to approximately 18\% in 2024--25~\cite{IPART2025}, while
+functional coverage held at 18\% over the same window (Supplementary
+Table~1 footnote). Acquittal enforcement (the empirical lever) and
+within-formation substitution (the model parameter) are distinct
+mechanisms; that coverage did not move when obligations were forced to
+acquit is consistent with the model's finding that bypass reduction alone,
+without procurement flexibility to redirect freed-up demand toward
+underserved types, yields limited coverage gains.
 
-The US 2008 Final Rule~\cite{USFinalRule2008} reached a similar
-conclusion for wetland mitigation, establishing a preference hierarchy
-(mitigation banking $>$ in-lieu fee) after a decade of evidence that
-fund-based mechanisms delivered weaker ecological
-outcomes~\cite{HoughHarrington2019}.
-The closest precedent for procurement flexibility mandates is technology
-carve-outs in Renewable Portfolio Standards, where mandating minimum
-purchases from specific energy types increased technology diversity
-even when general portfolio targets did not~\cite{KimTang2020}.
+The US 2008 Final Rule codified the same hierarchy for wetland
+mitigation~\cite{USFinalRule2008}, ranking mitigation banking above
+in-lieu fee programmes after a decade of evidence that fund-based
+mechanisms underperformed ecologically~\cite{HoughHarrington2019}.
+A closer institutional precedent is technology carve-outs in
+Renewable Portfolio Standards: Kim and Tang~\cite{KimTang2020} show
+that mandating minimum purchases from specific energy types
+increased technology diversity where general portfolio targets did
+not.
 
 Second, interventions that restrict flexibility or raise costs without
 redirecting demand are ineffective or counterproductive.
 Price floors cause developers to route more obligations into the Fund
 (routing rate from 34.1\% to 50.5\%) without generating new direct
 demand~\cite{WoodJotzo2011}.
-Mandating exact like-for-like matching for BCT purchases reduces coverage
-to 12.7\%, confirming that government intermediaries need procurement
+Mandating exact like-for-like matching for the Trust's purchases reduces
+coverage to 12.7\%, confirming that government intermediaries need procurement
 flexibility to serve thin markets~\cite{VanTeeffelen2014}.
 The rarity multiplier (2$\times$ credits for rare OTGs) has negligible
-effect (16.5\%) because the bottleneck for underserved types is the
-existence of demand, not the quantity per transaction; this is
-consistent with the theoretical finding that uniform multipliers
-are inadequate for rare habitats~\cite{Bull2017multipliers}.
+effect (16.5\%): the bottleneck for underserved types is the
+existence of demand, not the quantity per transaction. Bull et
+al.~\cite{Bull2017multipliers} showed analytically that uniform
+multipliers fail for rare habitats; our results identify why the
+failure is empirical too.
 
 zu Ermgassen et al.~\cite{zuErmgassen2020} argued that relaxing
 like-for-like rules destroys the scarcity signal that incentivises
-impact avoidance, and Drechsler~\cite{Drechsler2024} showed formally that
-buyer-choice flexibility always reduces ecological benefit.
-Our data provide empirical evidence consistent with this prediction.
-The procurement flexibility mandate does not relax like-for-like rules for
-the buyer; instead, regulators direct a fraction of compliance demand toward
-underserved types, preserving the scarcity signal for the remaining 80\% of
-purchases while channelling new demand where it is absent.
+impact avoidance, and Drechsler~\cite{Drechsler2024} showed formally
+that buyer-choice flexibility always reduces ecological benefit. The
+NSW data confirm both predictions empirically and identify the
+sub-mechanism: relaxing like-for-like at the buyer's discretion
+collapses demand into the cheapest types within each formation,
+which is exactly the pattern reproduced by the model.
+The procurement flexibility mandate does not let individual buyers choose to
+substitute across types; instead, regulators direct a fixed 20\% of
+compliance demand toward underserved types. The remaining 80\% retains
+type-specific like-for-like and the price signal it generates; the redirected
+20\% trades type-specific compensation for coverage breadth, a deliberate
+efficiency-coverage trade-off rather than a Pareto improvement over
+strict like-for-like.
 Bypass reduction and procurement flexibility therefore constitute
 the core policy package for improving ecological coverage. Both can be
 implemented within existing statutory frameworks.
@@ -418,7 +442,7 @@ The effectiveness of demand-side interventions reflects the depth of the
 coverage gap, which operates at three levels.
 First, non-TEC vegetation types (the ecological matrix that provides
 connectivity and buffering for threatened
-patches~\cite{Driscoll2013,FischerLindenmayer2007}) receive systematically
+patches~\cite{FischerLindenmayer2007}) receive systematically
 less direct market investment than listed TECs, because offset obligations
 reference TECs by name (Methods).
 Second, even when an obligation does fall on a TEC, current rules let
@@ -430,21 +454,21 @@ scope: 47\% of listed TECs receive no direct market investment (37 of 79
 have never traded or are served only by the Trust), and the 24 ecosystem
 types served only by the Trust show that developers route demand through
 the Fund rather than the open market.
-The market is failing on its own
-terms~\cite{MacKenzie2006performative}: designed to compensate for
-development impacts on listed threatened communities, it instead channels
-investment toward the most commercially accessible types. zu Ermgassen
-et al.~\cite{zuErmgassen2020} noted that the 2017 Biodiversity
-Conservation Act places no legal restriction on the Trust offsetting
-using any habitat type anywhere in the state; our data quantify the
-consequence. The Trust's budget (AUD\,47.3M per year) is sufficient to
+The market is failing on its own terms: designed to compensate for
+development impacts on listed threatened communities, it instead
+channels investment toward the most commercially accessible types. zu Ermgassen
+et al.~\cite{zuErmgassen2020} flagged the latitude on legal grounds:
+the 2017 Biodiversity Conservation Act places no legal restriction on
+the Trust offsetting using any habitat type anywhere in the state.
+The NSW transaction record shows the empirical signature of that
+latitude. The Trust's budget (AUD\,47.3M per year) is sufficient to
 sustain market activity in all but one formation, yet five are empirically
 near-extinct, consistent with the Trust's declining like-for-like
 precision (90\%$\to$65\%).
 
 \textbf{Costs and implementation.}
-Cost-effectiveness --- private outlay per percentage point of functional
-coverage gained --- is modest under the effective interventions. Bypass
+Cost-effectiveness, defined as private outlay per percentage point of
+functional coverage gained, is modest under the effective interventions. Bypass
 reduction increases total market expenditure by 3.1\% and procurement
 flexibility by 0.6\% (Supplementary Table~8), with average credit prices
 essentially unchanged. The Trust's procurement load follows the Fund
@@ -453,13 +477,14 @@ reducing regulator outlay; price floors increase routing to 50.5\% and so
 raise the regulator's burden even where private cost is flat. By
 comparison, a 20\% solar carve-out in US Renewable Portfolio Standards
 increased programme costs by 28\%~\cite{NovacheckJohnson2015}.
-A striking asymmetry emerges: it is far easier to damage coverage than
-to improve it. The BCT precision mandate reduces coverage by 3.6
-percentage points (eliminating a third of functional TEC markets),
-while the best positive intervention (bypass reduction) gains only 1.2
-percentage points. This asymmetry implies that poorly designed
-procurement rules can cause irreversible coverage losses that even
-well-designed interventions struggle to reverse.
+A striking asymmetry emerges in the model: coverage is easier to damage
+than to improve. The BCT precision mandate reduces coverage by 3.6
+percentage points (eliminating a third of functional TEC markets in
+simulation), while the best positive intervention (bypass reduction)
+gains only 1.2 percentage points. The asymmetry suggests that poorly
+designed procurement rules can produce coverage losses that
+well-designed interventions, within the range tested, only partially
+reverse.
 Flexibility mandates also raise acquittal complexity for developers, and the
 20\% threshold invites gaming near the margin.
 An alternative route to the same goal is to embed coverage
@@ -472,9 +497,9 @@ operational early warning of coverage decline before it becomes irreversible.
 
 \textbf{Generalisability and limitations.}
 The demand-concentration mechanism is not unique to biodiversity markets:
-analogous coverage biases have been documented in renewable energy
-markets~\cite{ZhouSolomonBrown2024,Bjorn2022} and water entitlement
-markets~\cite{DonnaEspinSanchez2026,Connor2013}, where mandatory or
+analogous coverage biases appear in renewable energy
+markets~\cite{ZhouSolomonBrown2024} and water entitlement
+markets~\cite{DonnaEspinSanchez2026}, where mandatory or
 compliance-driven demand also concentrates on the cheapest types. The
 mechanism here is therefore structurally general, but the quantitative
 findings are NSW-specific: every parameter is calibrated to NSW data, and
@@ -484,6 +509,9 @@ and credit-type segmentation. These design features describe most
 current compliance offset schemes, including the United Kingdom's
 Biodiversity Net Gain framework, but transferring quantitative numbers to
 markedly different designs would require recalibration.
+The five interventions evaluated act on demand-side parameters or price;
+supplier-side levers (cost-floor adjustments, supply subsidies for rare
+types) are out of scope and warrant separate analysis.
 
 The scenario ranking
 (Bypass Reduction $>$ Procurement Flexibility $>$ Rarity Multiplier
@@ -492,8 +520,8 @@ the parameter ranges examined in Supplementary Table~6 and the global
 sensitivity analysis in Supplementary Note~2.
 
 Functional coverage in this analysis is an outcome metric tied to the
-regulator's stated intent --- every listed ecosystem type should sustain
-a market --- rather than a welfare measure integrating ecological benefit
+regulator's stated intent, that every listed ecosystem type should sustain
+a market, rather than a welfare measure integrating ecological benefit
 against fiscal cost; the ranking reports how well each intervention
 satisfies the scheme's compensatory design. Scenario-comparison
 percentiles overlap by approximately one percentage point, so the
@@ -514,18 +542,13 @@ the policy tools are identified, and the statutory authority to act already exis
 \section*{Online Methods}\label{sec:methods}
 
 \textbf{Market ecology framework.}
-The market ecology framework treats financial market participants as biological
-species competing for limited profit opportunities, with population dynamics governed
-by the profitability of their behavioural
-strategies~\cite{Farmer2002,SchollCalinescuFarmer2021}.
-The framework extends the ecological metaphor of Lo's Adaptive Markets
-Hypothesis~\cite{Lo2004} into a formal dynamical system, drawing on earlier
-applications of ecological network theory to financial stability~\cite{HaldaneMay2011,
-MayLevinSugihara2008}.
-We build on the formulation of Scholl, Calinescu, and
-Farmer~\cite{SchollCalinescuFarmer2021}, who showed that the ecological community
-matrix of interacting trading strategies can be computed numerically from a Walrasian
-agent-based model.
+Farmer's market-ecology framework~\cite{Farmer2002} treats financial market
+participants as biological species competing for limited profit opportunities,
+with population dynamics governed by the profitability of their behavioural
+strategies. We build on the formulation of Scholl, Calinescu and
+Farmer~\cite{SchollCalinescuFarmer2021}, who showed that the ecological
+community matrix of interacting trading strategies can be computed numerically
+from a Walrasian agent-based model.
 We use Generalised Lotka-Volterra (GLV) equations as an analytically tractable
 complement to the ABM, validated by computing the community matrix from ABM
 perturbations following their methodology (Supplementary Note~1;
@@ -551,7 +574,7 @@ primary results use the calibrated agent-based model described below.
 \textbf{Species classification and micro-founded demand.}
 Four functional participant species are defined following the principle that
 species are grouped by behavioural strategy, not institutional
-identity~\cite{Farmer2002,SchollCalinescuFarmer2021,Tesfatsion2006}
+identity~\cite{SchollCalinescuFarmer2021}
 (Supplementary Table~3). Each species is identified by a signal function
 $\phi_i(\text{state})$ that maps observable market state to the agent's
 demand: cost-minimising compliance, $\phi = -\text{price}$ within feasible
@@ -562,11 +585,10 @@ thin-market procurement, $\phi = \mathbb{1}[\text{liquidity} < L^*]
 cost-floor supply, $\phi = \mathbb{1}[p > 0.8 c]$ where $c$ is marginal
 production cost. Two distinct organisations are the same species if and
 only if they share $\phi_i$.
-Demand functions are grounded in constant absolute risk aversion (CARA)
-utility maximisation~\cite{Pratt1964} with heterogeneous beliefs,
-following Brock and Hommes~\cite{BrockHommes1997} and
-Chiarella~\cite{ChiarellaHe2002}; the equivalence of the CARA derivation
-and the bid rules below is established in Supplementary Note~1.2
+Demand functions follow Brock-Hommes-style CARA agents with heterogeneous
+beliefs~\cite{BrockHommes1997}; the closed-form bid rules use Chiarella and
+He's specification~\cite{ChiarellaHe2002}. The equivalence of the CARA
+derivation and the bid rules below is established in Supplementary Note~1.2
 (Spearman $\rho \geq 0.97$ across 50 MC seeds):
 
 \begin{enumerate}
@@ -580,7 +602,7 @@ and the bid rules below is established in Supplementary Note~1.2
   \item \textbf{Intermediaries.} Entities appearing on both sides
     of transactions; encompasses brokers and price-volatility-exploiting
     intermediaries.
-    CARA demand~\cite{ChiarellaHe2002,Pratt1964}:
+    CARA demand~\cite{ChiarellaHe2002}:
     $z(p) = \theta \cdot (p_{\text{fv}} - p) / (\gamma \sigma^2)$,
     clipped by a leverage constraint $|z \cdot p| \leq 2W$,
     where $p_{\text{fv}}$ is a rolling mean of recent clearing prices.
@@ -613,9 +635,9 @@ Strategy populations are determined by the regulatory structure of the
 scheme: 30 compliance buyers, 12 BCT-type agents, 10 intermediaries, and
 30 habitat banks per simulation. Compliance demand is regulatorily
 mandated and BCT operates under a public mandate, so the model captures
-within-formation and across-formation competition for finite compliance
-demand directly --- the dynamic the GLV reduction characterises ---
-rather than between-strategy capital flows.
+within-formation and across-formation competition for the finite flow of
+compliance obligations directly, the dynamic the GLV reduction
+characterises, rather than between-strategy capital flows.
 
 \textbf{Formation-level interaction matrix.}
 The $15 \times 15$ interaction matrix $\boldsymbol{\alpha}$ (equation~\ref{eq:glv})
@@ -706,11 +728,11 @@ should therefore be read as the response of a single calibrated parameter
 within its sensitivity range (FC = 15.5--17.5\% as $P_{\text{variation}}$
 varies in $[0.3, 0.7]$; Supplementary Table~6), rather than as an effect
 identified independently of the calibration.
-Calibration validation: (i)~functional coverage among TECs (25.3\%, observed: 22.8\%) and
-non-TECs (12.1\%) emerge without being calibration targets;
+Calibration validation: (i)~functional coverage among TECs (model: 25.3\%; observed: 22.8\%)
+and non-TECs (model: 12.1\%; observed: 15.6\%) emerges without being a calibration target;
 (ii)~the formation-level transaction ranking matches observations
 (Spearman $\rho = 0.98$, $p < 10^{-10}$);
-(iii)~the compliance/BCT obligation split (65.8\%/34.2\%) reproduces
+(iii)~the compliance/BCT obligation split (65.9\%/34.1\%) reproduces
 the observed 65\%/35\% retirement breakdown;
 (iv)~model functional coverage~=~16.3\% (10th--90th: 14.6--17.9\%) is within 1.6 percentage
 points of the observed 17.9\%.
@@ -771,9 +793,6 @@ outputs and takes full responsibility for the content of the publication.
 
 \backmatter
 
-\bmhead{Acknowledgements}
-I thank J.~Doyne Farmer (INET Oxford) for feedback on the methodology.
-
 \section*{Declarations}
 
 \begin{itemize}
@@ -807,7 +826,10 @@ I thank J.~Doyne Farmer (INET Oxford) for feedback on the methodology.
   Functional coverage (FC) = fraction of 252 OTGs sustaining $\geq$5
   transactions. Fund rate = fraction of obligations routed through the
   Biodiversity Conservation Fund (observed: 35.4\%).
-  Cost $\Delta$ = change in total market expenditure relative to Baseline.
+  Cost $\Delta$ = change in direct (open-market) developer expenditure
+  relative to Baseline; Fund pay-ins are not included, so scenarios that
+  shift obligations into the Fund show a negative Cost~$\Delta$ even when
+  total regulatory cost rises.
   Bypass reduction and procurement flexibility are the two most effective
   interventions; price floors and BCT precision mandates are counterproductive.
 }\label{tab:scenarios}

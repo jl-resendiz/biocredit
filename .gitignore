@@ -17,6 +17,7 @@ env/
 .idea/
 *.swp
 *.swo
+.claude/
 
 # Jupyter
 .ipynb_checkpoints/
